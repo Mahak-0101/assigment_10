@@ -1,19 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/fragmentContainerA"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent" />
+    <EditText android:id="@+id/etId" android:hint="ID (for Update/Delete)"
+        android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etName" android:hint="Name"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etEmail" android:hint="Email"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-    <FrameLayout
-        android:id="@+id/fragmentContainerB"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent" />
+    <Button android:id="@+id/btnInsert" android:text="Insert"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnUpdate" android:text="Update"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnDelete" android:text="Delete"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnFetch" android:text="Fetch All"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 </LinearLayout>
